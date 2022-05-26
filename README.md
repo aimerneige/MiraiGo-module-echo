@@ -1,6 +1,7 @@
 # MiraiGo-module-echo
 
 ID: aimerneige.test.echo
+
 Module for [MiraiGo-Template](https://github.com/Logiase/MiraiGo-Template)
 
 ## 功能
