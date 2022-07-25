@@ -10,7 +10,7 @@ import (
 )
 
 var instance *echo
-var logger = utils.GetModuleLogger("internal.logging")
+var logger = utils.GetModuleLogger("aimerneige.test.echo")
 
 type echo struct {
 }
@@ -27,13 +27,13 @@ func (e *echo) MiraiGoModule() bot.ModuleInfo {
 	}
 }
 
-func (m *echo) Init() {
+func (e *echo) Init() {
 }
 
-func (m *echo) PostInit() {
+func (e *echo) PostInit() {
 }
 
-func (m *echo) Serve(b *bot.Bot) {
+func (e *echo) Serve(b *bot.Bot) {
 	b.OnGroupMessage(func(c *client.QQClient, msg *message.GroupMessage) {
 		out := echoMessage(msg.ToString())
 		if out == "" {
@@ -53,10 +53,10 @@ func (m *echo) Serve(b *bot.Bot) {
 	})
 }
 
-func (m *echo) Start(b *bot.Bot) {
+func (e *echo) Start(b *bot.Bot) {
 }
 
-func (m *echo) Stop(b *bot.Bot, wg *sync.WaitGroup) {
+func (e *echo) Stop(b *bot.Bot, wg *sync.WaitGroup) {
 	defer wg.Done()
 }
 
